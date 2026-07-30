@@ -200,35 +200,39 @@ $$
 - **Claims** is the mean number of extracted atomic claims per response.
 
 If a response contains no atomic claims, its faithfulness is undefined and it
-is excluded from \(F\), while its completeness remains 0. This prevents
+is excluded from $F$, while its completeness remains 0. This prevents
 abstaining on an answerable record from inflating F–C F1.
 
 ### Evidence-boundary behavior
 
-- **Scope-violation rate (SVR, lower is better)** — the fraction of PARTIAL
-  records on which a model substantively answers an unsupported part instead
-  of omitting it or acknowledging the gap:
+**Scope-violation rate (SVR, lower is better).** The fraction of PARTIAL
+records on which a model substantively answers an unsupported part instead of
+omitting it or acknowledging the gap:
 
-  $$
-  \mathrm{SVR}=\frac{N_{\mathrm{PARTIAL}}^{\mathrm{scope\ violation}}}
-  {N_{\mathrm{PARTIAL}}}.
-  $$
+$$
+\mathrm{SVR}=
+\frac{N_{\mathrm{PARTIAL}}^{\mathrm{scope\ violation}}}
+{N_{\mathrm{PARTIAL}}}
+$$
 
-- **Over-abstention rate (OAR, lower is better)** — the fraction of YES records
-  on which a model incorrectly abstains:
+**Over-abstention rate (OAR, lower is better).** The fraction of YES records
+on which a model incorrectly abstains:
 
-  $$
-  \mathrm{OAR}=\frac{N_{\mathrm{YES}}^{\mathrm{abstained}}}{N_{\mathrm{YES}}}.
-  $$
+$$
+\mathrm{OAR}=
+\frac{N_{\mathrm{YES}}^{\mathrm{abstained}}}
+{N_{\mathrm{YES}}}
+$$
 
-- **Clarification rate (CR, higher is better)** — the fraction of AMBIGUOUS
-  records for which the response asks for missing information, preserves
-  multiple interpretations, or explicitly identifies the ambiguity:
+**Clarification rate (CR, higher is better).** The fraction of AMBIGUOUS
+records for which the response asks for missing information, preserves
+multiple interpretations, or explicitly identifies the ambiguity:
 
-  $$
-  \mathrm{CR}=\frac{N_{\mathrm{AMBIGUOUS}}^{\mathrm{clarified}}}
-  {N_{\mathrm{AMBIGUOUS}}}.
-  $$
+$$
+\mathrm{CR}=
+\frac{N_{\mathrm{AMBIGUOUS}}^{\mathrm{clarified}}}
+{N_{\mathrm{AMBIGUOUS}}}
+$$
 
 ### Abstention on the clean YES/NO subset
 
